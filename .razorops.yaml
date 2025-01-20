@@ -7,7 +7,7 @@ global:
   - GOOS=linux
   - GOARCH=amd64
   - GOFLAGS=-mod=vendor
-  - LD_FLAGS=-w -s
+  - LD_FLAGS=-w -s 
 
 tasks:
   setup:
